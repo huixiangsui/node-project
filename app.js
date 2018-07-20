@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
-app.get('/',(req,res)=>{
-    res.send('hello world')
-})
+const router = require('./router.js')
+app.use(router)
+
 app.listen(3000,()=>{
     console.log('running 3000.....')
 })
